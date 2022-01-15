@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Course Form</title>
+    <style>
+        .inf{
+            border-bottom: 1px solid black;
+            height: 150px;
+            width: 500px;
+        }
+        .inf_2{
+            border-bottom: 1px solid black;
+            height: 55px;
+            width: 500px;
+            
+        }
+        .inf_3{
+            border-bottom: 1px solid black;
+            height: 120px;
+            width: 500px;
+        }
+        .home{
+            border: 5px dotted red;
+            margin: 0 auto;
+            width: 500px;
+            padding: 0px 5px;
+            background-color: ghostwhite;
+        }
+        body{
+            background-image: url(comc.jpg);
+
+        }
+        .must{
+            color: red;
+        }
+        #button_1{
+            background-color: rgb(243, 192, 192);
+        }
+        #button_2{
+            background-color: rgb(243, 192, 192);
+        }
+    </style>
+
+</head>
+<body>
+<div class="home">
+   <center> <h1><b>QUESTIONNAIRE</b></h1> </center>
+   <hr>
+   <br>
+   <hr>
+    <form action="result.html">
+
+        <div class="inf">
+            <label for="name">Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="name" id="name" placeholder="Write Your Name...">
+            <br> <br> <br>
+            <label for="surname">Surname:&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="surname" id="surname" placeholder="Write Your Surname...">
+            <br> <br> <br>
+            <label for="idNum">Id Number:</label>
+            <input type="password" name="idNum" id="idNum" 
+            placeholder="Enter 11 digits..." 
+            pattern="[0-9]{11}" required>
+            <b><span class="must">*</span></b>
+
+        </div>
+        <div class="inf_2">
+            <br>
+            <label for="birthday">Date of Birth:</label>
+            <input type="date" name="birthday"
+            id="birthday"
+            min="1970-01-01"
+            max="2015-01-01"
+            value="2022-01-13"
+            required>
+            <b><span class="must">*</span></b>
+
+        </div>
+        <div class="inf_2">
+            <br>
+            <input type="radio" name="gender" id="gender1" value="male" checked>
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" id="gender2" value="female">
+            <label for="gender">Female</label>
+           
+
+        </div>
+
+        <div class="inf_2">
+            <br>
+            <label for="lang">How Many Languages Do You Speak?</label>
+            <input type="number" name="lang" id="lang" min="1" max="7" value="1">
+
+        </div>
+        <div class="inf_3">
+            <p>Select Activities:</p>
+
+            <input type="checkbox" name="act" id="playing_games" value="playing_games">
+            <label for="playing_games">Playing Games&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="checkbox" name="act" id="reading_books" value="reading_books">
+            <label for="reading_books">Reading Books</label> <br> <br>
+            <input type="checkbox" name="act" id="watching_movies" value="watching_movies">
+            <label for="watching_movies">Watching Movies</label>
+            <input type="checkbox" name="act" id="listening_musics" value="listening_to_music">
+            <label for="listening_to_music">Listening to Musics</label>
+
+        </div>
+
+        <div class="inf_2">
+            <br>
+            <label for="education">Select Your Educations:</label>
+            <select name="education" id="education">
+
+                <option value="High_School">High-School</option>
+                <option value="Bachelors">Bachelor's</option>
+                <option value="Masters">Master's</option>
+                <option value="PhD">PhD</option>
+
+            </select>
+
+        </div>
+        <div class="inf_2">
+            <br>
+            <label for="point">Your English Level (0 - 5):</label>
+            <input type="range" name="point" id="point" min="0" max="5">
+
+        </div>
+        <div class="inf_2">
+            <br>
+            <label for="dosya">Add Your Photo:</label>
+            <input type="file" name="file" id="dosya">
+
+        </div>
+        <div class="inf">
+            <h3>Contacts Information</h3>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="example@example.com" required>
+            <b><span class="must">*</span></b>
+            <br> <br>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" 
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+            placeholder="(xxx)-xxx-xxxx"
+            required>
+            <b><span class="must">*</span></b>
+
+
+        </div>
+        <br>
+        <input type="reset" value="Clear" id="button_1">
+        <input type="submit" value="Submit" id="button_2">
+        <br>
+        <br>
+        <p align="right">(<span class="must"><b>*</b></span>) You must fill this area.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+</div>
+</body>
+</html>
